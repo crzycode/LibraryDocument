@@ -1,0 +1,40 @@
+  @Output() Output: EventEmitter<any> = new EventEmitter <any> () //Gives a Output on Which Item you Clicked;
+  @Output() Click: EventEmitter<any> = new EventEmitter <any> () // return you If your Are Clicked on dropdown ;
+  @Output() KeyPress: EventEmitter<any> = new EventEmitter <any> (); // return you keypress value
+  @Input() Radius:any = 10
+  @Input() Key:any; // this key means which key you want to show in as a list
+  @Input() GetKeyValue:any[]=[] // if The data is Array of object then Provide me a key to return those key value as object else return on value which is in the input feild
+  @Input() Padding:any = 20 // its all about padding
+  @Input() AnimeSec:any = 0.3
+  @Input() IsBoxShadow:boolean = false
+  @Input() Background:any="white"
+  @Input() FormControlName:any="default"
+  @Input() Data:any[]=["dfghj","dfgh","mangal"] if this data is an array then you dont need to add Key or GetKeyvalue its return you a value if this data is array of object then provide key is Must GetKeyvalue is optional 
+  @Input() DropdownHeight:any = 200
+  @Input() Placeholder:any="select"
+  @Input() setValue:any; // Set a Initial value
+  @Input() ReadOnly:boolean=true // if this is true that means you are not write on dropdown input if this is false that means you can write on dropdown input but inner input search is hide
+  @Input() ListStyle:any={ // item list how its look like
+      "margin-top":"5px",
+       "height": "30px",
+        "width": "100%",
+        "border-bottom": "1px solid #ececec",
+         "align-items": "center",
+    "background":"#f2f2f2",
+    "border-radius":"5px"
+  }
+  
+  @Input() InputStyle:any ={ // item list how its look like
+      height:'45px',
+      width:'200px',
+      background:'#f2f2f2',
+      'border-radius':"10px",
+      "padding-left":"10px"
+  }
+  @Input() SearchInputStyle:any={ // item list how its look like
+    height:'30px',
+    width:'90%',
+    background:'#f2f2f2',
+    'border-radius':"10px",
+    "padding-left":"10px"
+  }
